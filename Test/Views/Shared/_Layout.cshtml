@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Test.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/ztoaster.css"/>
 </head>
 <body>
+       <div class="se-pre-con"></div>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -42,9 +44,11 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+       <script src="~/js/ztoaster.min.js" ></script>
     @await RenderSectionAsync("Scripts", required: false)
 
     
+    @RenderSection("ScriptsHome", required: false)
     @RenderSection("ScriptsSubscriptions", required: false)
 </body>
 </html>
