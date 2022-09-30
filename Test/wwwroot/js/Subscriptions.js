@@ -88,7 +88,9 @@ SearchUser = () => {
                     duration: 3000
                 });
 
-                idCurrentSuscriptor = data.IdSuscriptor;
+
+                idCurrentSuscriptor = data.idSuscriptor;
+
 
                 $('#IptName').val(data.nombre);
                 $('#IptLastname').val(data.apellido);
@@ -156,8 +158,12 @@ ClearFrm = () => {
 $('#btnCancel').click(function () {
 
     Action = 0;
+     UpdateEnabled = false;
+     EnabledRegisterSuscripcion = false;
     ClearFrm();
     $('#IptDocumentNumber').val('');
+    $('#IptDocumentNumber').attr('disabled',false);
+    $('#IptDocumentNumber').attr('disabled', false);
 
 });
 
@@ -217,6 +223,18 @@ EnabledFrm = () => {
 }
 
 
+
+DisabledFrm = () => {
+
+    $('#IptName').attr('disabled', true);
+    $('#IptLastname').attr('disabled', true);
+    $('#IptAddress').attr('disabled', true);
+    $('#IptEmail').attr('disabled', true);
+    $('#IptPhone').attr('disabled', true);
+    $('#IptUserName').attr('disabled', true);
+    $('#IptPassword').attr('disabled', true);
+
+}
 
 
 //#endregion
@@ -418,6 +436,7 @@ Create = (name, lastName, documentNumber, idDocumentType, address, phone, email,
 
             } else if (data == 200) {
                 //200 success
+                DisabledFrm();
                 ztoast("Suscriptor registrado correctamente", {
                     title: 'Éxito',
                     type: 'success',
@@ -574,6 +593,9 @@ Update = (name, lastName, documentNumber, idDocumentType, address, phone, email,
 
              if (data == 200) {
                 //200 success
+
+                 
+                 DisabledFrm();
                 ztoast("Suscriptor modificado correctamente", {
                     title: 'Éxito',
                     type: 'success',
@@ -720,13 +742,16 @@ CreateSuscripcion = () => {
 }
 
 
-
-//endregion
-
+//#endregion
 
 
+
+
+//#region End Load
 
 $(window).on('load', function () {
     $(".se-pre-con").fadeOut("slow");
 });
 
+
+//#endregion

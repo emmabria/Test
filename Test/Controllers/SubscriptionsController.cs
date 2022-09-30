@@ -54,24 +54,24 @@ namespace Test.Controllers
 
             try
             {
-
+                /*valido user name*/
                 var username = _context.Suscriptors.Where(p => p.NombreUsuario.Equals(model.NombreUsuario))
                                  .Select(t => t.NombreUsuario).FirstOrDefault();
 
-
+                /*valido tipo y number*/
                 var user = _context.Suscriptors.Where(p => p.NumeroDocumento.Equals(model.NumeroDocumento)
                                      && p.TipoDocumento.Equals(model.TipoDocumento))
                               .Select(t => t).FirstOrDefault();
 
                 if (username != null)
                 {
-
-
+                    //si username existe 
                     return Ok(201);
 
                 }
                 else if (user != null)
                 {
+                    //si tipo y nro ya existe
                     return Ok(202);
 
                 }
@@ -144,10 +144,12 @@ namespace Test.Controllers
             try
             {
 
-            
+            //valido que no tenga ninguna suscripcion
                 var suscripcion = _context.Suscripcions.Where(p => p.IdSuscriptor.Equals(model.IdSuscriptor))
                               .Select(t => t).FirstOrDefault();
 
+
+                //si ya tiene una
                 if (suscripcion != null)
                 {
 
