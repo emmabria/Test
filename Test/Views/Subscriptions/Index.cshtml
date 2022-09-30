@@ -1,0 +1,161 @@
+﻿@{
+    ViewData["Title"] = "Suscripciones";
+}
+
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-12">
+            <h3>Suscripción</h3>
+
+            <span>Para realizar la suscripción complete los siguientes datos</span>
+        </div>
+
+        <div class="col-12 mt-3">
+            <h4>Buscar Suscriptor</h4>
+        </div>
+
+
+        <div class="col-12 col-md-5">
+            <label for="SelectDocumentType" class="form-label">Tipo Documento</label>
+            <select id="SelectDocumentType" class="form-select"></select>
+        </div>
+
+        <div class="col-12 col-md-5">
+            <label for="IptDocumentNumber" class="form-label">Número de Documento</label>
+            <input id="IptDocumentNumber" type="text" class="form-control" />
+        </div>
+
+        <div class="col-12 col-md-2 pt-4">
+            <button type="button" class="btn btn-success w-100 mt-2" id="btnSearch">Buscar</button>
+        </div>
+
+
+        <div class="col-12 mt-4">
+            <h4>Datos del Subscriptor</h4>
+        </div>
+
+
+        <div class="col-12">
+            <div class="row">
+
+                <div class="col-12 col-md-10">
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-6">
+                            <label for="IptName" class="form-label">Nombre</label>
+                            <input id="IptName" type="text" class="form-control" />
+                        </div>
+
+
+
+                        <div class="col-12 col-md-6">
+                            <label for="IptLastname" class="form-label">Apellido</label>
+                            <input id="IptLastname" type="text" class="form-control" />
+                        </div>
+
+                         
+
+                        <div class="col-12 col-md-6">
+                            <label for="IptAddress" class="form-label">Dirección</label>
+                            <input id="IptAddress" type="text" class="form-control" />
+                        </div>
+
+
+
+                        <div class="col-12 col-md-6">
+                            <label for="IptEmail" class="form-label">Email</label>
+                            <input id="IptEmail" type="email" class="form-control" />
+                        </div>
+
+
+                          <div class="col-12 col-md-6">
+                            <label for="IptPhone" class="form-label">Teléfono</label>
+                            <input id="IptPhone" type="text" class="form-control" />
+                        </div>
+
+                         
+
+                        <div class="col-12 col-md-6">
+                            <label for="IptStatus" disabled class="form-label">Estado</label>
+                            <input id="IptStatus" type="text" class="form-control" />
+                        </div>
+
+
+                         <div class="col-12 col-md-6">
+                            <label for="IptUserName" class="form-label">Nombre del Usuario</label>
+                            <input id="IptUserName" type="text" class="form-control" />
+                        </div>
+
+                         
+
+                        <div class="col-12 col-md-6">
+                            <label for="IptPassword" class="form-label">Contraseña</label>
+                            <input id="IptPassword" type="password" class="form-control" />
+                        </div>
+
+
+                         <div class="col-12 col-md-3 mt-5">
+                           <button type="button" class="btn btn-success w-100" id="btnRegister">Registrar Suscripción</button>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-12 col-md-2">
+                    
+                    <div class="row">
+
+                          <div class="col-12 pt-4">
+                           <button type="button" class="btn btn-info w-100 text-white mt-2" id="btnNew">Nuevo</button>
+                        </div>
+
+                         <div class="col-12 mt-4">
+                           <button type="button" class="btn btn-primary w-100 mt-2" id="btnUpdate">Modificar</button>
+                        </div>
+
+                         <div class="col-12 mt-4">
+                           <button type="button" class="btn btn-success w-100 mt-2" id="btnSave">Guardar</button>
+                        </div>  
+
+                           <div class="col-12 mt-4">
+                           <button type="button" class="btn btn-warning w-100 mt-2" id="btnCancel">Cancelar</button>
+                        </div>  
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+@section ScriptsSubscriptions{
+
+
+
+
+    <script src="~/js/Subscriptions.js"></script>
+
+
+        }
+
